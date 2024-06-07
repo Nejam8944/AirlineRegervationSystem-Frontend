@@ -1,0 +1,61 @@
+.booked-tickets {
+  padding: 20px;
+}
+
+.booked-tickets h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.tickets-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tickets-table th,
+.tickets-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.tickets-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.tickets-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tickets-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tickets-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #2c3e50;
+  /* background-color: #4CAF50; */
+  color: white;
+}
+
+/* .btn {
+  margin: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+} */
+
+.cancel-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.download-btn {
+  background-color: #008CBA;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}

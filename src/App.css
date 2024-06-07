@@ -6,6 +6,20 @@
   height: 40vmin;
   pointer-events: none;
 }
+.home-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-image {
+  background-image: url('https://img.freepik.com/free-photo/planes-wing-cuts-through-sky-cotton-candy-clouds-radiant-sunset_91128-4456.jpg?t=st=1716836791~exp=1716840391~hmac=d81c61587c1e12e735b3f1dec29179a22f93c290ddd9f8dabdd07596f31dc0da&w=1060'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0; /* Adjust padding as needed */
+  color: #fff; /* Text color on top of the image */
+  height: 90vh;
+}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

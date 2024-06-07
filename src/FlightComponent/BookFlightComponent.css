@@ -1,0 +1,64 @@
+.book-flight {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.book-flight h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Reduced the gap between columns */
+}
+
+.form-group {
+    flex: 1 1 calc(50% - 10px); /* Adjust the percentage to control the column width */
+    margin-bottom: 8px; /* Further reduced vertical margin */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 3px; /* Reduced the margin below the label */
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 6px; /* Reduced padding for a more compact input field */
+    box-sizing: border-box;
+}
+
+.required {
+    color: red;
+}
+
+.error input,
+.error select {
+  border: 1px solid red;
+}
+
+button {
+    /* display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px; Added margin-top to separate the button from the form fields */
+}
+/* 
+button:hover {
+    background-color: #0056b3;
+} */

@@ -1,0 +1,31 @@
+.all-airplanes {
+    padding: 20px;
+  }
+  
+  .airplanes-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .airplanes-table th, .airplanes-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .airplanes-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .airplanes-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .airplanes-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  

@@ -1,0 +1,31 @@
+.all-airports {
+    padding: 20px;
+  }
+  
+  .airports-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .airports-table th, .airports-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .airports-table th {
+    background-color: #f2f2f2;
+  }
+  
+  .airports-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .airports-table tr:hover {
+    background-color: #ddd;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
