@@ -7,7 +7,7 @@ const AllAirplanes = () => {
   const [airplanes, setAirplanes] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/airplane/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airplane/all')
       .then(response => {
         console.log(response.data);
         setAirplanes(response.data);

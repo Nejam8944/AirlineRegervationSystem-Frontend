@@ -7,7 +7,7 @@ const AllAirports = () => {
   const [airports, setAirports] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/airport/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airport/all')
       .then(response => {
         setAirports(response.data);
       })

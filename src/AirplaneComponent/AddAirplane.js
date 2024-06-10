@@ -31,7 +31,7 @@ const AddAirplane = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/airplane/add', airplane)
+    axios.post('https://airlineregervationsystem-backend.onrender.com/airplane/add', airplane)
       .then((response) => {
         console.log(response.data);
         alert('Airplane added successfully');

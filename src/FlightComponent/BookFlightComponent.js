@@ -48,7 +48,7 @@ const BookFlightComponent = () => {
     }
 
     if (auth) {
-      axios.get(`http://localhost:8080/users/wallet/balance/${auth.email}`)
+      axios.get(`https://airlineregervationsystem-backend.onrender.com:8080/users/wallet/balance/${auth.email}`)
         .then(response => {
           setBalance(response.data);
         })
@@ -82,13 +82,13 @@ const BookFlightComponent = () => {
           totalPassengers,
         };
   
-        axios.post(`http://localhost:8080/tickets/book`, ticketBookingData, {
+        axios.post(`https://airlineregervationsystem-backend.onrender.com:8080/tickets/book`, ticketBookingData, {
           headers: {
             'Content-Type': 'application/json'
           }
         })
         .then(response => {
-          axios.put(`http://localhost:8080/flight/update/availableSeat`, flight, {
+          axios.put(`https://airlineregervationsystem-backend.onrender.com:8080/flight/update/availableSeat`, flight, {
             params: {
               classType: flightClass,
               totalPassengers,

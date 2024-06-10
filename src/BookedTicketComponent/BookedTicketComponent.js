@@ -18,7 +18,7 @@ const BookedTicketComponent = () => {
 
   useEffect(() => {
     if (userEmail) {
-      axios.get(`http://localhost:8080/users/tickets/all?email=${userEmail}`)
+      axios.get(`https://airlineregervationsystem-backend.onrender.com/users/tickets/all?email=${userEmail}`)
         .then(response => {
           const sortedTickets = response.data.sort((a, b) => new Date(b.bookingTime) - new Date(a.bookingTime));
           setTickets(sortedTickets);
@@ -30,7 +30,7 @@ const BookedTicketComponent = () => {
   }, [userEmail]);
 
   const deriveBookingId = (ticketId) => {
-    // Assuming ticketId is in the format: "http://localhost:8080/tickets/{bookingId}"
+    // Assuming ticketId is in the format: "https://airlineregervationsystem-backend.onrender.com/tickets/{bookingId}"
     const bookingId = ticketId.substring(24).toUpperCase();
     return bookingId;
   };
@@ -41,14 +41,14 @@ const BookedTicketComponent = () => {
   };
   
   const handleConfirmCancel = (password) => {
-    axios.post('http://localhost:8080/users/authenticate', {
+    axios.post('https://airlineregervationsystem-backend.onrender.com/users/authenticate', {
       email: userEmail,
       password: password,
       userRole: userRole,
     })
     .then(response => {
       if (response.status === 200) {
-        axios.put(`http://localhost:8080/tickets/cancel/${ticketToCancel}`)
+        axios.put(`https://airlineregervationsystem-backend.onrender.com/tickets/cancel/${ticketToCancel}`)
           .then(response => {
             // Update tickets state to reflect cancellation
             setTickets(tickets.map(ticket => 
@@ -81,7 +81,7 @@ const BookedTicketComponent = () => {
   };
 
   const handleDownloadTicket = (flightId) => {
-    axios.get(`http://localhost:8080/tickets/confirmed/flight/${flightId}`)
+    axios.get(`https://airlineregervationsystem-backend.onrender.com/tickets/confirmed/flight/${flightId}`)
       .then(response => {
         const tickets = response.data;
   

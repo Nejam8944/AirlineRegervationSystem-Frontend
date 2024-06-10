@@ -21,7 +21,7 @@ const AddAirport = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/airport/add', airport)
+    axios.post('https://airlineregervationsystem-backend.onrender.com/airport/add', airport)
       .then((response) => {
         console.log(response.data);
         alert('Airport added successfully');

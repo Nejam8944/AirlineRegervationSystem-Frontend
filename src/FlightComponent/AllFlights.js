@@ -22,7 +22,7 @@ const AllFlights = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/flight/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/flight/all')
       .then(response => {
         setFlights(response.data);
         setFilteredFlights(response.data);
@@ -31,7 +31,7 @@ const AllFlights = () => {
         console.error('There was an error fetching the flight data!', error);
       });
 
-    axios.get('http://localhost:8080/airplane/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airplane/all')
       .then(response => {
         setAirplanes(response.data.map(plane => plane.airplaneName));
       })
@@ -39,7 +39,7 @@ const AllFlights = () => {
         console.error('There was an error fetching the airplane data!', error);
       });
 
-    axios.get('http://localhost:8080/airport/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airport/all')
       .then(response => {
         setAirports(response.data.map(airport => airport.airportLocation));
       })
@@ -80,7 +80,7 @@ const AllFlights = () => {
 
   const handleDelete = (flightNumber) => {
     if (window.confirm('Are you sure you want to delete this flight?')) {
-      axios.delete(`http://localhost:8080/flight/delete/${flightNumber}`)
+      axios.delete(`https://airlineregervationsystem-backend.onrender.com/flight/delete/${flightNumber}`)
         .then(response => {
           setFlights(flights.filter(flight => flight.flightNumber !== flightNumber));
           setFilteredFlights(filteredFlights.filter(flight => flight.flightNumber !== flightNumber));

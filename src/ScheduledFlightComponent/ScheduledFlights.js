@@ -18,7 +18,7 @@ const ScheduledFlights = () => {
   const location = useLocation();
 
   useEffect(() => {
-    axios.get('http://localhost:8080/flight/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/flight/all')
       .then(response => {
         setFlights(response.data);
         setFilteredFlights(response.data);
@@ -27,7 +27,7 @@ const ScheduledFlights = () => {
         console.error('There was an error fetching the flight data!', error);
       });
 
-    axios.get('http://localhost:8080/airport/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airport/all')
       .then(response => {
         setAirports(response.data.map(airport => airport.airportLocation));
       })

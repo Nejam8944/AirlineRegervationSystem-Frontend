@@ -26,7 +26,7 @@ const UpdateFlight = () => {
   const [airports, setAirports] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:8080/airplane/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airplane/all')
       .then(response => {
         setAirplanes(response.data.map(plane => plane.airplaneName));
       })
@@ -34,7 +34,7 @@ const UpdateFlight = () => {
         console.error('There was an error fetching the airplane data!', error);
       });
 
-    axios.get('http://localhost:8080/airport/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airport/all')
       .then(response => {
         setAirports(response.data.map(airport => airport.airportLocation));
       })
@@ -53,7 +53,7 @@ const UpdateFlight = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.put('http://localhost:8080/flight/update', flightData)
+    axios.put('https://airlineregervationsystem-backend.onrender.com/flight/update', flightData)
       .then((response) => {
         console.log(response.data);
         alert('Flight updated successfully');
