@@ -21,7 +21,7 @@ const AddFlight = () => {
   const [airports, setAirports] = useState([]);
 
   useEffect(() => {
-    axios.get('https://airlineregervationsystem-backend.onrender.com:8080/airplane/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airplane/all')
       .then(response => {
         setAirplanes(response.data.map(plane => plane.airplaneName));
       })
@@ -29,7 +29,7 @@ const AddFlight = () => {
         console.error('There was an error fetching the airplane data!', error);
       });
 
-    axios.get('https://airlineregervationsystem-backend.onrender.com:8080/airport/all')
+    axios.get('https://airlineregervationsystem-backend.onrender.com/airport/all')
       .then(response => {
         setAirports(response.data.map(airport => airport.airportLocation));
       })
@@ -48,7 +48,7 @@ const AddFlight = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('https://airlineregervationsystem-backend.onrender.com:8080/flight/add', flight)
+    axios.post('https://airlineregervationsystem-backend.onrender.com/flight/add', flight)
       .then((response) => {
         console.log(response.data);
         alert('Flight added successfully');

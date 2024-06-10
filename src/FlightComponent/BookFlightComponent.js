@@ -82,13 +82,13 @@ const BookFlightComponent = () => {
           totalPassengers,
         };
   
-        axios.post(`https://airlineregervationsystem-backend.onrender.com:8080/tickets/book`, ticketBookingData, {
+        axios.post(`https://airlineregervationsystem-backend.onrender.com/tickets/book`, ticketBookingData, {
           headers: {
             'Content-Type': 'application/json'
           }
         })
         .then(response => {
-          axios.put(`https://airlineregervationsystem-backend.onrender.com:8080/flight/update/availableSeat`, flight, {
+          axios.put(`https://airlineregervationsystem-backend.onrender.com/flight/update/availableSeat`, flight, {
             params: {
               classType: flightClass,
               totalPassengers,
