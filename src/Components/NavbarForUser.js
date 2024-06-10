@@ -22,7 +22,7 @@ export default function NavbarForUser() {
 
   const handleLogout = () => {
     logout();
-    navigate('/');
+    navigate('https://airlineregervationsystem-frontend.onrender.com');
   };
 
   return (

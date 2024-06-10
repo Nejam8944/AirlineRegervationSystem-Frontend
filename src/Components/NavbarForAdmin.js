@@ -8,7 +8,7 @@ export default function NavbarForAdmin() {
 
   const handleLogout = () => {
     logout();
-    navigate('/');
+    navigate('https://airlineregervationsystem-frontend.onrender.com');
   };
 
   return (
