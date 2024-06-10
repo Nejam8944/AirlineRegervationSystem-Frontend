@@ -10,7 +10,7 @@ export default function NavbarForUser() {
 
   useEffect(() => {
     if (auth && auth.email) {
-      axios.get(`http://localhost:8080/users/name/${auth.email}`)
+      axios.get(`https://airlineregervationsystem-backend.onrender.com/users/name/${auth.email}`)
         .then(response => {
           setFirstName(response.data);
         })

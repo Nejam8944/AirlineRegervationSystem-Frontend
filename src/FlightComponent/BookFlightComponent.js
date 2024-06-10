@@ -48,7 +48,7 @@ const BookFlightComponent = () => {
     }
 
     if (auth) {
-      axios.get(`https://airlineregervationsystem-backend.onrender.com:8080/users/wallet/balance/${auth.email}`)
+      axios.get(`https://airlineregervationsystem-backend.onrender.com/users/wallet/balance/${auth.email}`)
         .then(response => {
           setBalance(response.data);
         })
