@@ -12,7 +12,7 @@ const WalletComponent = () => {
   useEffect(() => {
     if (auth) {
       // Fetch the wallet balance from the backend using the new endpoint
-      axios.get(`http://localhost:8080/users/wallet/balance/${auth.email}`)
+      axios.get(`https://airlineregervationsystem-frontend.onrender.com/users/wallet/balance/${auth.email}`)
         .then(response => {
           setBalance(response.data);
         })
@@ -30,10 +30,10 @@ const WalletComponent = () => {
     e.preventDefault();
     if (auth) {
       // Update the wallet balance in the backend using the new endpoint
-      axios.put(`http://localhost:8080/users/update/wallet/balance/${auth.email}/${parseFloat(amount)}`)
+      axios.put(`https://airlineregervationsystem-frontend.onrender.com/users/update/wallet/balance/${auth.email}/${parseFloat(amount)}`)
         .then(response => {
           // Fetch the updated wallet balance after updating
-          return axios.get(`http://localhost:8080/users/wallet/balance/${auth.email}`);
+          return axios.get(`https://airlineregervationsystem-frontend.onrender.com/users/wallet/balance/${auth.email}`);
         })
         .then(response => {
           setBalance(response.data);
