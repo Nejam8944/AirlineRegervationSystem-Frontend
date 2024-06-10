@@ -29,7 +29,7 @@ export default function Register() {
     };
 
     try {
-      const response = await axios.post('http://localhost:8080/users/register', userData);
+      const response = await axios.post('https://airlineregervationsystem-backend.onrender.com/users/register', userData);
       setAlertMessage({ type: 'success', text: 'Registration successful!' });
     } catch (error) {
       setAlertMessage({ type: 'danger', text: 'Registration failed!' });
