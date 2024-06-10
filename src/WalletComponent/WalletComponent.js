@@ -30,10 +30,10 @@ const WalletComponent = () => {
     e.preventDefault();
     if (auth) {
       // Update the wallet balance in the backend using the new endpoint
-      axios.put(`https://airlineregervationsystem-frontend.onrender.com/users/update/wallet/balance/${auth.email}/${parseFloat(amount)}`)
+      axios.put(`https://airlineregervationsystem-backend.onrender.com/users/update/wallet/balance/${auth.email}/${parseFloat(amount)}`)
         .then(response => {
           // Fetch the updated wallet balance after updating
-          return axios.get(`https://airlineregervationsystem-frontend.onrender.com/users/wallet/balance/${auth.email}`);
+          return axios.get(`https://airlineregervationsystem-backend.onrender.com/users/wallet/balance/${auth.email}`);
         })
         .then(response => {
           setBalance(response.data);
